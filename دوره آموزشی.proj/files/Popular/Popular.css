@@ -1,0 +1,218 @@
+
+.cover{
+    border:5px solid rgb(4, 103, 195);
+    background-color:rgba(2, 30, 74, 0.607);
+    height:2155px;
+    margin:15px 300px 10px 250px;
+    width:1000px;
+}
+
+.comment-section {
+    margin: 40px 300px 40px 23px;
+}
+
+#toolbar {
+    margin-bottom: 10px;
+}
+
+.textarea {
+    width: 50%;
+    height: 100px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+    color: yellow;
+    font-size: 18px;
+    font-family: f4;
+    background-color: rgb(0, 10, 45);
+    overflow: auto; 
+    white-space: pre-wrap;
+}
+
+#comments-container {
+     height: 400px; /* ارتفاع و عرض محدوده کامنت‌ها */ 
+     width: 50%;
+     overflow-y: auto; 
+     border: 1px solid #ddd; 
+     padding: 10px; 
+     margin: 40px 230px 40px 23px;
+     background-color: #e3e3e3;
+}
+
+#comments {
+    margin-top: 20px;
+}
+
+.user-comment {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #f9f9f9;
+    width: 95%;
+    position: relative;
+    overflow: auto; 
+    word-break: break-all;/*برای اینکه خط هرموقع لازم شد بشکنه*/
+}
+
+.user-comment .buttons {
+    margin-top: 10px;
+    text-align: right;
+}
+
+.user-comment button {
+    margin-left: 5px;
+}
+
+
+
+.product-intro {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 50px 20px;
+    padding: 10px;
+    margin: 20px;
+    width: 200px;
+    text-align: center;
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+.product-intro img {
+    width: 100%;
+    height: auto;
+}
+
+.product-intro .price {
+    font-weight: bold;
+    color: #333;
+}
+
+
+.product-achivments {
+    background-color: rgb(129, 242, 255);
+    border: 1px solid #ddd;
+    border-radius: 30px 20px;
+    padding: 5px;
+    margin: 30px 288px;
+    width: 350px;
+    height: 240px;
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    transform: scale(1.1);
+    direction: rtl;
+    position: relative;
+}
+
+.sarfasl{
+    position: absolute;
+    margin: -360px 270px 400px 30px;
+    color: whitesmoke;
+    direction: rtl;
+}
+
+    dl{
+    font-size: 15px;
+}
+    dt{
+        font-weight: bold;
+        cursor: pointer;
+    }
+    dd{
+        color: aqua;
+    }
+
+    .long-text{
+        color: #e0e0e0;
+        word-break: keep-all;
+        width: 900px;
+        padding: 20px;
+        margin-right: 20px;
+        line-height: 1.5;
+    }
+
+    #attention{
+        font-weight:bold;
+        font-size: 20px;
+        color:yellow;
+        background-color: rgba(49, 72, 3, 0.49);
+        border: 3px dashed orange;
+        border-radius: 20px 20px;
+        padding: 20px;direction: rtl;
+        margin-right: 220px;
+        font-family: f4;
+    }
+
+    /* Media Queries - laptop(small) */
+    @media (max-width: 1439) {
+      .cover, .comment-section, #comments-container{
+        width: 90%;
+        margin: 2% 5%;
+      }
+      .long-text {word-break: break-all; max-width: 90% ;}
+      
+    .user-help {
+      margin-right: 30px;
+      margin-top: 45px;
+      width: 150px;
+  }
+  .product-achivment{ 
+  margin: 0 auto;}
+    }
+  
+/* Media Queries - Tablet */
+  @media (max-width: 1024px) /*to (min-width:768px)*/ {
+    .cover, .comment-section, #comments-container, .product-achivments{
+      width: 90%;
+      margin: 2% 5%;
+    }
+    .long-text {word-break: break-all; max-width: 90% ;}
+    .mainlogo, footer, .user-help {visibility: hidden}
+  }
+
+/*  برای حالت عمودی گوشی*/
+@media (min-width: 320px) and (max-width: 480px) and (orientation: portrait) {
+    .cover, .comment-section, #comments-container, .product-intro, .product-achivments {
+      width: 100%;
+      margin: 2% 0;
+    }
+    body {
+      background-image: none ;
+      background-color: rgb(23, 42, 138);
+    }
+    .product-intro, .product-achivments {
+      width: 100%;
+    }
+    .long-text, #attention {
+      width: 100%;
+    }
+    .mainlogo, footer, #attention {
+      visibility: hidden;
+    }
+    .product-achivments{display: none; overflow: hidden;}
+  }
+  
+  /* برای حالت افقی گوشی*/
+  @media (min-width: 320px) and (max-width: 480px) and (orientation: landscape) {
+    .cover, .comment-section, #comments-container, .product-intro, .product-achivments, .sarfasl {
+      width: 100%;
+      margin: 1% 0;
+    }
+    body {
+      background-color: rgb(23, 42, 138);
+    }
+    .product-intro, .product-achivments {
+      width: 100%;
+    }
+    .long-text, #attention {
+      width: 100%;
+      margin-right: 0;
+    }
+    .mainlogo, footer, #attention {
+      visibility: hidden;
+    }
+    .product-achivments{display: none; overflow: hidden;}
+  }
+  

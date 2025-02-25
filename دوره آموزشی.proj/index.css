@@ -1,0 +1,577 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: f3;
+    -webkit-font-smoothing: antialiased; 
+    -moz-osx-font-smoothing: grayscale; 
+}
+
+*::selection{background-color: #00492c;color:#2cffb5;}
+
+
+html{
+    box-sizing: border-box;
+  }
+  
+  * , *::before, *::after{
+    box-sizing: inherit;
+  }
+
+.user-help {
+    background-color: rgb(218, 253, 255);
+    border: 1px solid #828282;
+    border-radius: 50px 20px;
+    box-shadow: 0px 0px 5px rgb(119, 119, 119);
+    padding: 10px;
+    margin: 20px;
+    width: 180px;
+    max-width: 100%;
+    text-align: center;
+    scale:1.1;
+   /* float:left;*/
+   /* margin-left: 80px;
+    margin-top: 90px;*/
+    /*position: relative;*/
+    position: absolute;
+    margin-top: 90px;
+    margin-right: 1400px;
+}
+
+.user-help img {
+    width: 100%;
+    height: auto;
+}
+
+.user-help a {
+    color: rgb(0, 0, 0);
+    direction: rtl;
+    list-style: none;
+    text-decoration: none;
+    transition: color 0.3s, text-decoration 0.3s;
+    margin-right:80%;
+    justify-content: space-between;
+    font-weight: bold;
+    white-space: nowrap;
+    margin: 0 5px;
+}
+
+.user-help a:hover {
+    color: rgb(0, 225, 255); 
+    text-decoration: underline; 
+}
+
+#sc-container {
+    position: relative;
+    display: inline-block;
+}
+
+#sc-container img {
+    transition: transform 0.3s;
+}
+
+#sc-container:hover img {
+    transform: scale(1.1);
+}
+
+.tooltip {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 60%;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    white-space: nowrap;
+}
+
+#sc-container:hover .tooltip {
+    display: block;
+}
+
+.userpassage{
+    display: flex;
+    align-items: center;
+}
+
+.userpassage a {
+    color: white;
+    direction: rtl;
+    list-style: none;
+    text-decoration: none;
+    transition: color 0.3s, text-decoration 0.3s;
+    margin-right:80%;
+    justify-content: space-between;
+    font-weight: bold;
+    white-space: nowrap;
+    margin: 0 5px;
+}
+
+.userpassage :hover {
+    color: rgb(0, 225, 255); /* تغییر رنگ متن */
+    text-decoration: underline; /* زیرخط‌دار شدن هر گزینه.*/
+}
+
+.search-box{
+    position: absolute;
+    top: 5%;
+    right: 70%;
+    transform: translate(-50%,-50%);
+    height: 60px;
+    background: #353535;
+    line-height:40px;
+    padding: 10px;
+    border-radius: 60px;
+    direction: rtl;
+}
+.search-input{
+    background: #353535;
+    color: #fff;
+    outline: none;
+    border: none;
+    line-height:30px;
+    width: 0px;
+    float: right;
+    font-size:14px;
+    transition: 0.7s ease;
+    font-family:sans-serif;
+}
+
+#searchbar {
+   width: 20px;
+}
+.search-btn{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration:none;
+    background: #ffffff;
+    padding: 12px;
+    border-radius: 50%;
+    float: left;
+    color: #ff5722;
+    transition: 0.4s ease;
+}
+.search-box:active > .search-input{
+    width: 240px;
+    margin: 0px 8px -47px 0px;
+}
+.search-input:focus{
+    width: 240px;
+    margin: 0px 8px;
+}
+.search-box:active > .search-btn{
+    background: #fff;
+}
+.search-input:focus + .search-btn{
+    background: #fff;
+}
+
+
+input[type="text"] {
+    background-color: #ffffff; /* باکس جستجو آبی */
+    color: #08052b; /* متن زرد */
+    border: none;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+button {
+    background-color: white; /* دکمه سفید */
+    border: 1px solid #007bff; /* حاشیه آبی */
+    color: #333; /* متن دکمه */
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease; /* انتقال نرم */
+    white-space: nowrap;
+}
+
+button:hover {
+    background-color: #e0e0e0; /* رنگ خاکستری در هاور */
+}
+
+button:active {
+    background-color: #e0e0e0; /* رنگ خاکستری در کلیک */
+    color: red; /* متن دکمه قرمز */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* سایه زیر دکمه */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url(files/background/background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+   /* background-color: #f4f4f4;*/
+}
+header {
+    background-color: #09418088;
+    background: linear-gradient(right, #09418088, rgba(28,56,129,255));
+    background: -webkit-linear-gradient(right,#09418088,rgba(28,56,129,255));
+    color: #fff;
+    padding: 10px;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+    white-space: nowrap;
+}
+.menu {
+    display: flex;
+    list-style: none;
+}
+.menu li {
+    position: relative;
+    margin: 0 15px;
+}
+.menu li ul {
+    display: none;
+    position: absolute;
+    background-color: #09418088;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    list-style: none;
+    padding: 10px;
+   /* white-space: nowrap;
+*/
+}
+
+.menu li:hover ul {
+    display: block;
+}
+/*.menu :hover{
+    color:red;
+    text-decoration: underline; /*زیر همه موارد لیست کشویی خط می اندازد*/
+
+.menu a {
+    color:whitesmoke;
+    text-decoration: none;
+    transition: color 0.3s, text-decoration 0.3s;
+}
+.menu li:hover > a {
+    color: rgb(238, 255, 0); /* تغییر رنگ متن */
+    text-decoration: underline; /* زیرخط‌دار شدن هر گزینه.*/
+}
+
+.cover{
+    border-radius: 20px;
+    box-shadow: 5px 5px 5px rgba(0,0,0,0.2);
+    border:5px solid rgb(4, 103, 195);
+    background-color:rgba(2, 30, 74, 0.607);
+}
+
+.slideshow-container {
+    position: relative;
+    max-width: 800px;
+    margin: auto;
+    overflow: hidden;
+}
+.mySlides {
+    display: none;
+    animation: fade 1s;
+}
+img {
+    width: 100%;
+    border-radius: 10px;
+}
+@keyframes fade {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+.dot {
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+}
+.active {
+    background-color: #717171;
+}
+
+.welcome-text {
+    padding: 20px;
+    text-align: center;
+    color: #e0e0e0;
+}
+
+.product-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    color: #e0e0e0;
+}
+
+.product {
+    margin: 0 10px;
+    text-align: center;
+}
+
+.product img {
+    border-radius: 10px; 
+    cursor: pointer;
+    transition: transform 0.3s ease; /* انتقال نرم برای تغییر ظاهر */
+    width: 280px;
+    height:200px;
+}
+
+.product img:hover {
+    -webkit-transform: scale(1.05);
+    -moz-transform: scale(1.05);
+    -o-transform: scale(1.05);
+    transform: scale(1.05); /* بزرگ شدن تصویر */
+}
+
+.product p:hover{
+    cursor: pointer;
+    color: rgb(238, 255, 0);
+}
+
+.product-parts {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    color: #e0e0e0;
+}
+
+.parts {
+    margin: 0 10px;
+    text-align: center;
+}
+
+.parts img {
+    border-radius: 10px; 
+    transition: transform 0.3s ease; 
+    width: 280px;
+    height:200px;
+}
+
+.parts img:hover {
+    -webkit-transform: scale(1.05);
+    -moz-transform: scale(1.05);
+    -o-transform: scale(1.05);
+    transform: scale(1.05); 
+}
+
+.product-parts img , p{
+    cursor: pointer;
+}
+
+.product-parts p:hover{
+    color: rgb(238, 255, 0);
+}
+
+.mainlogo {
+    opacity: 1; 
+    transition: opacity 0.3s ease, transform 0.6s ease;
+    display: inline-block; 
+}
+
+.mainlogo:hover {
+    opacity: 0.8; 
+    transform: rotate(360deg); 
+    transform-origin: center;
+}
+
+.long-text{
+    color: #e0e0e0;
+    word-break: keep-all;
+    width: 900px;
+    padding: 20px;
+    margin-right: 20px;
+    line-height: 1.5;
+}
+
+footer {
+    background-color: #abf2ff; 
+    color: #333;
+    padding: 110px;
+    text-align: center;
+    border-radius: 0px 0px 20px 20px;
+    margin-top: -250px;
+}
+
+.col3
+{
+    width: 33%;
+    float: right;
+}
+
+.foter
+{
+    background-color: #292929;
+    color: #fff;
+    margin-top: -120px;
+}
+
+.title-foter
+{
+    padding: 30px 0px 20px 0;
+    color: #000000;
+    border-bottom: solid 1px #000000;
+    font-family: f2;
+    margin: 0 10px;
+    line-height: 0.5;
+}
+.div3-foter
+{
+    margin: 0 20px;
+}
+.menu-foter
+{
+}
+.menu-foter ul
+{
+    list-style: none;
+    padding-top: 15px;
+    padding-right: 2px;
+}
+.menu-foter li
+{
+    padding: 10px;
+    font-size: 12px;
+    font-family: IS;
+}
+.menu-foter a
+{
+    color: #000000;
+}
+.foter2
+{
+    padding: 10px 0;
+    background-color: #212121;
+    border-top: solid 1px #383838;
+    color: #000000;
+}
+
+@font-face {
+    font-family:f1 ;
+    src: url(fonts/IRANSans-Bold-web.ttf) format("truetype"), url(fonts/IRANSans-Bold-web.eot) format("Embedded OpenType"), url(fonts/IRANSans-Bold-web.woff) format("Web Open Font Format"), url(fonts/IRANSans-Bold-web.woff2) format("Web Open Font Format 2");
+    font-weight: bold;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family:f2 ;
+    src: url(fonts/IRANSans-Medium-web.ttf) format("truetype"), url(fonts/IRANSans-Medium-web.eot) format("Embedded OpenType"), url(fonts/IRANSans-Medium-web.woff) format("Web Open Font Format"), url(fonts/IRANSans-Medium-web.woff2) format("Web Open Font Format 2");
+    font-weight: normal;
+    font-style: normal;
+  }
+  @font-face {
+    font-family:f3 ;
+    src: url(collection-persian-web-font/tanha-font-v0.9/Tanha.ttf) format("truetype"), url(collection-persian-web-font/tanha-font-v0.9/Tanha.eot) format("Embedded OpenType"), url(collection-persian-web-font/tanha-font-v0.9/Tanha.woff) format("Web Open Font Format"), url(collection-persian-web-font/tanha-font-v0.9/Tanha.woff2) format("Web Open Font Format 2");
+    font-weight: normal;
+    font-style: normal;
+  }
+  @font-face {
+    font-family:f4 ;
+    src: url(collection-persian-web-font/other-font/pixelboy-BBadr.ttf) format("truetype"), url(collection-persian-web-font/other-font/pixelboy-BBadr.eot) format("Embedded OpenType"), url(collection-persian-web-font/other-font/pixelboy-BBadr.woff) format("Web Open Font Format");
+    font-weight: normal;
+    font-style: normal;
+  }
+  @font-face {
+    font-family:f5 ;
+    src: url(collection-persian-web-font/other-font/pixelboy-BKoodakBold.ttf) format("truetype"), url(collection-persian-web-font/other-font/pixelboy-BKoodakBold.eot) format("Embedded OpenType"), url(collection-persian-web-font/other-font/pixelboy-BKoodakBold.woff) format("Web Open Font Format");
+    font-weight: normal;
+    font-style: normal;
+  }
+  @font-face {
+    font-family:f6 ;
+    src: url(collection-persian-web-font/other-font/pixelboy-BNazanin.ttf) format("truetype"), url(collection-persian-web-font/other-font/pixelboy-BNazanin.eot) format("Embedded OpenType"), url(collection-persian-web-font/other-font/pixelboy-BNazanin.woff) format("Web Open Font Format");
+    font-weight: normal;
+    font-style: normal;
+  }
+
+/* Media Queries - laptop(small) */
+@media only screen and (max-width: 1440px) {
+    body {background-image: none ;background-color: rgb(23, 42, 138); height: 100vh;    margin: 0;}
+    .cover, .comment-section, #comments-container, .product-achivments {
+        max-width: 90%;
+        margin: 2% 5%;
+        right: 90%;
+      }
+}
+
+/* Media Queries - Tablet */
+@media only screen and (max-width: 1024px) {
+    body {background-image: none ;background-color: rgb(23, 42, 138); height: 100vh;    margin: 0;}
+    .cover, .comment-section, #comments-container, .product-achivments {
+        width: 90%;
+        margin: 2% 5%;
+        right: 90%;
+      }
+
+    .user-help {
+        margin-right: 30px;
+        margin-top: 45px;
+        width: 150px;
+    }
+
+    .search-box {
+        top: 10%;
+        right: 60%;
+    }
+
+    .product img, .parts img {
+        width: 220px;
+        height: 160px;
+    }
+    .product-container, .product-parts{
+        flex-wrap: wrap;
+    }
+
+    .long-text {
+        width: 80%;
+    }
+
+    header {
+        padding: 5px;
+    }
+
+
+    .slideshow-container {
+        max-width: 600px;
+    }
+    .mainlogo, footer {visibility: hidden}
+}
+
+  /* Media Queries - Mobile */
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+    .cover{
+        height: 100%;
+    }
+    .user-help {
+        margin-left: 20px;
+        margin-top: 30px;
+        width: 120px;
+    }
+    body {background-color: rgb(23, 42, 138); height: 100vh;    margin: 0;}
+    .search-box {
+        top: 15%;
+        right: 50%;
+    }
+
+    .product img, .parts img {
+        width: 180px;
+        height: 140px;
+    }
+
+    .long-text {
+        width: 90%;
+    }
+
+    header {
+        padding: 5px;
+    }
+
+    .slideshow-container {
+        max-width: 400px;
+    }
+    .mainlogo, footer{display: none}
+}
